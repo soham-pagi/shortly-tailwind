@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.burger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.burger-top, .burger-middle, .burger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: gray;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.burger-middle {
+  transform: translateY(7px);
+}
+
+.burger-bottom {
+  transform: translateY(14px);
+}
+
+.open .burger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .burger-middle {
+  display: none;
+}
+
+.open .burger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
